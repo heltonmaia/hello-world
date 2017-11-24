@@ -2,7 +2,6 @@
 ...about model
 
 ### Figure 1
-<!DOCTYPE HTML>
 <html>
 <head>  
 <script>
@@ -95,7 +94,6 @@ chart.render();
 
 </body>
 </html>
-
 ### Figure 2
 
 ### extra
