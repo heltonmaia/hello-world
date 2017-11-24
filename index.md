@@ -2,39 +2,13 @@
 ...about model
 
 ### Figure 1
-
-Skip to content
-This repository
-
-    Pull requests
-    Issues
-    Marketplace
-    Explore
-
-    @heltonmaia
-
-1
-0
-
-    0
-
-heltonmaia/paper-km
-Code
-Issues 0
-Pull requests 0
-Projects 0
-Wiki
-Insights
-Settings
-paper-km/index.html
-eb13a6c an hour ago
-@heltonmaia heltonmaia 1 test
-94 lines (81 sloc) 2.67 KB
 <!DOCTYPE HTML>
 <html>
 <head>  
 <script>
+
 window.onload = function () {
+
 function addDataPointsAndRender() {
 //Input parameters:
 var S   = 10;       //Boyden: azul (460) = 10; amarelo (590) = 9; %blue light: 7.18 (Buszaki); 10.3 (Aravanis). Scattering coefficient (mm-1). Mouse: 11.2; rat: 10.3 (Aravanis, blue); 4.4 (Buszaki, orange); 3.4 (Buszaki, red)
@@ -45,13 +19,16 @@ var r   = 0.2;      //Fiber radius (mm) OBS: Tava 0.25, ou seja, 250 um de raio?
 var P   = 20;       //Laser power at tip(mW)
 var eta = 1;        //Laser coupling fraction
 var d   = 1;        //Distance from fiber (mm)
+
 // Equations:
 var A   = Math.PI*Math.pow(r,2);        //Area of fiber (mm2)0
 var rh0 = r*(Math.sqrt(Math.pow(nt/NA,2)-1));   //rh0 --> find out!
+
 //Including absorption (according to K-M model):
 var a   = 1+(K/S);
 var b   = Math.sqrt((Math.pow(a,2))-1);
 console.log(b);
+
 var dataPoints = [];
 var step = 0.001;
     for (var i=0; i<=d; i+=step){
@@ -68,6 +45,7 @@ var step = 0.001;
 	console.log(Itotal2);
 return dataPoints;
 }
+
 var chart = new CanvasJS.Chart("chartContainer", {
 	zoomEnabled: true,
 	zoomType: "xy",
@@ -102,9 +80,12 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		dataPoints: addDataPointsAndRender()
 	}],
 });
+
 chart.render();
 //$("#chartContainer").CanvasJSChart(chart);
+
 }
+
 </script>
 </head>
 <body>
@@ -114,21 +95,6 @@ chart.render();
 
 </body>
 </html>
-
-    © 2017 GitHub, Inc.
-    Terms
-    Privacy
-    Security
-    Status
-    Help
-
-    Contact GitHub
-    API
-    Training
-    Shop
-    Blog
-    About
-
 
 ### Figure 2
 
