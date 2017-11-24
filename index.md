@@ -2,6 +2,7 @@
 ...about model
 
 ### Figure 1
+<script src="figure1.js" type="text/javascript"></script>
 
 ### Figure 2
 
