@@ -6,7 +6,6 @@
 <head>  
 <script>
 
-```
 window.onload = function () {
 
 function addDataPointsAndRender() {
@@ -86,7 +85,6 @@ chart.render();
 
 }
 
-```
 </script>
 </head>
 <body>
